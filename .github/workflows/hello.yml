@@ -1,18 +1,19 @@
 # This is workflow name
 name: Hello
 
-# run on a trigger
+# run on an automatic trigger. whenever change is pushed to branch (deployment)
 on:
-
   push:
-
     branches: [main]
+    paths:
+      - '**.html'
 
 # these are jobs inside the workflow
 jobs:
 
 # this is the name of the job
   greet:
+    # this is github runner, each job runs on a runner
     runs-on: ubuntu-latest
     steps:
       - name: say hello to users
