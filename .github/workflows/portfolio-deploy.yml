@@ -14,7 +14,7 @@ jobs:
   deploy:
     runs-on: ubuntu-letest
 
-    environments:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
@@ -41,4 +41,3 @@ jobs:
       # STEP 4
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        
